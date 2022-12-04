@@ -1,2 +1,2 @@
 # stock_price_prediction
-This is the stock price prediction project I did as part of corizo internship.
+Predicting stock price using a logistic regression model based on the data in the last four years.
