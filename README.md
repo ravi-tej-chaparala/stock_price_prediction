@@ -1,36 +1,19 @@
-# Stock Price Prediction Using Machine Learning
+# Stock Price Prediction Using Logistic Regression
 
 ## Project Overview
 
-This project aims to predict stock prices using machine learning algorithms. The dataset used consists of historical stock prices, and several preprocessing techniques were applied to prepare the data for model training. Various models were implemented, and their performance was evaluated based on accuracy and other key metrics.
+This project uses a logistic regression model to predict stock price movement based on four years of historical stock data. Features such as `open-close`, `low-high`, and `is_quarter_end` were engineered to enhance the model's predictive power.
 
-### Key Features
-- **Data Preprocessing**: The dataset underwent cleaning, normalization, and feature extraction to make it suitable for model training.
-- **Models Implemented**: Several machine learning models were used, including:
-  - Logistic Regression
-  - Random Forest
-  - Support Vector Machine (SVM)
-- **Evaluation Metrics**: Confusion matrix, accuracy, and other evaluation metrics were used to assess model performance.
+### Key Steps
+- **Data Preprocessing**: Cleaned the dataset, removed redundant columns, and created new features.
+- **Feature Engineering**: Added features like the difference between the opening and closing prices, and identified if the date was a quarter-end.
+- **Model**: Trained a logistic regression model and evaluated it using ROC-AUC and a confusion matrix.
 
 ### Results
-- **Best Performing Model**: Random Forest outperformed the other models in terms of accuracy.
-- **Model Limitations**: While the models achieved reasonable performance, stock prices are inherently volatile, and more sophisticated techniques (such as deep learning) might yield better results.
-
-### Visualizations
-- **Confusion Matrix**: A confusion matrix was plotted to evaluate the performance of the models on the validation data.
-- **Accuracy Metrics**: Graphs showing model performance were included to visually compare different models.
-
-### Tools & Frameworks
-- **Python**: The primary programming language.
-- **Libraries**:
-  - Pandas: For data manipulation.
-  - Scikit-learn: For machine learning models and metrics.
-  - Matplotlib/Seaborn: For data visualization.
-
-## Conclusion
-The machine learning models provided reasonable predictions for stock prices, but improvements can be made by using more complex algorithms such as deep learning. The stock market's volatility poses challenges, and further exploration with different datasets or feature engineering may enhance prediction accuracy.
+- **Training ROC-AUC Score**: 0.54
+- **Validation ROC-AUC Score**: 0.58
+- The model’s accuracy suggests the need for more complex models to improve prediction performance.
 
 ## Future Work
-- **Deep Learning Models**: Implement models like LSTM or GRU to capture time-series dependencies better.
-- **Feature Engineering**: Include more financial indicators and external factors such as news sentiment.
-- **Hyperparameter Tuning**: Further tuning of model parameters could improve performance.
+- Experiment with advanced models like Random Forests or LSTMs.
+- Incorporate more financial indicators and hyperparameter tuning to improve results.
